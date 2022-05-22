@@ -14,7 +14,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password.join("");
 
 }
 
@@ -61,7 +61,7 @@ function generatePassword() {
     alert("You must select something for your password! Please Try Again!");
       generatePassword(); 
   }
-  
+
   for (var i = 0; i < passwordLength; i++) {
     randomPassword[i] = chosenChars[Math.floor(Math.random() * chosenChars.length)];  
   }
